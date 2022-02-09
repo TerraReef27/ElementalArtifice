@@ -15,6 +15,6 @@ public class ArtItemModelsGen extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent(ArtItems.TEST_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("blocks/test_block"));
+        withExistingParent(ArtItems.TEST_BLOCK_ITEM.get().getRegistryName().getPath(), modLoc("block/test_block"));
     }
 }

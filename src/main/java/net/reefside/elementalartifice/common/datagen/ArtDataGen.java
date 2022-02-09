@@ -14,9 +14,16 @@ public class ArtDataGen {
     public static void gatherDataGenerators(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper helper =  event.getExistingFileHelper();
-        ArtBlockTagsGen blockTags = new ArtBlockTagsGen(generator,helper);
-        generator.addProvider(blockTags);
-        generator.addProvider(new ArtBlockStatesGen(generator, helper));
-        generator.addProvider(new ArtItemGen(generator, blockTags, helper));
+
+        if(event.includeServer()) {
+            ArtBlockTagsGen blockTags = new ArtBlockTagsGen(generator, helper);
+            generator.addProvider(blockTags);
+            generator.addProvider(new ArtItemGen(generator, blockTags, helper));
+        }
+
+        if(event.includeClient()) {
+            generator.addProvider(new ArtBlockStatesGen(generator, helper));
+            generator.addProvider(new ArtItemModelsGen(generator, helper));
+        }
     }
 }
