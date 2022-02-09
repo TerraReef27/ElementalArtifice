@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "elementalartifice:block/test_block"
+    }
+  }
+}
