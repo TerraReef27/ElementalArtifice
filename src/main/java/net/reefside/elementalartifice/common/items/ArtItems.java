@@ -14,4 +14,5 @@ public class ArtItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final RegistryObject<Item> TEST_BLOCK_ITEM = ITEMS.register(ArtBlocks.TEST_BLOCK.getId().getPath(), () -> new BlockItem(ArtBlocks.TEST_BLOCK.get(), new Item.Properties().tab(ITEM_GROUP)));
+    public static final RegistryObject<Item> DIRT_BOMB_ITEM = ITEMS.register("dirt_bomb", () -> new DirtBombItem(new Item.Properties().tab(ITEM_GROUP)));
 }
