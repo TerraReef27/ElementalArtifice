@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 //Possible issues on one sided registries
 import static net.reefside.elementalartifice.common.blocks.ArtBlocks.BLOCKS;
 import static net.reefside.elementalartifice.common.items.ArtItems.ITEMS;
+import static net.reefside.elementalartifice.common.entities.ArtEntities.ENTITIES;
 
 @Mod(ElementalArtifice.MODID)
 public class ElementalArtifice {
@@ -36,6 +37,7 @@ public class ElementalArtifice {
 
         BLOCKS.register(modbus);
         ITEMS.register(modbus);
+        ENTITIES.register(modbus);
     }
 
     private void setup(FMLCommonSetupEvent event)

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "elementalartifice:item/dirt_bomb_item"
+  }
+}

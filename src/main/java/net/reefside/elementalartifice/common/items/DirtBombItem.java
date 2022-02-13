@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.reefside.elementalartifice.common.entities.ArtEntities;
-import net.reefside.elementalartifice.common.entities.projectiles.DirtBombEntityProjectile;
+import net.reefside.elementalartifice.common.entities.projectiles.DirtBombProjectileEntity;
 
 
 public class DirtBombItem extends Item {
@@ -19,12 +19,12 @@ public class DirtBombItem extends Item {
     }
 
     @Override
-    InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
         level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F);
 
         if(!level.isClientSide) {
-            DirtBombEntityProjectile dirtBomb = new DirtBombEntityProjectile(ArtEntities.DIRT_BOMB, level, player);
+            DirtBombProjectileEntity dirtBomb = new DirtBombProjectileEntity(ArtEntities.DIRT_BOMB_PROJECTILE.get(), player, level);
             dirtBomb.setItem(itemStack);
             level.addFreshEntity(dirtBomb);
         }

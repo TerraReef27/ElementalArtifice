@@ -7,17 +7,17 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.reefside.elementalartifice.common.items.ArtItems;
 
-public class DirtBombEntityProjectile extends ThrowableItemProjectile {
+public class DirtBombProjectileEntity extends ThrowableItemProjectile {
 
-    public DirtBombEntityProjectile(EntityType<? extends DirtBombEntityProjectile> type, Level level) {
+    public DirtBombProjectileEntity(EntityType<? extends DirtBombProjectileEntity> type, Level level) {
         super(type, level);
     }
 
-    public DirtBombEntityProjectile(EntityType<? extends DirtBombEntityProjectile> type, double x, double y, double z, Level level) {
+    public DirtBombProjectileEntity(EntityType<? extends DirtBombProjectileEntity> type, double x, double y, double z, Level level) {
         super(type, x, y, z, level);
     }
 
-    public DirtBombEntityProjectile(EntityType<? extends DirtBombEntityProjectile> type, LivingEntity user, Level level) {
+    public DirtBombProjectileEntity(EntityType<? extends DirtBombProjectileEntity> type, LivingEntity user, Level level) {
         super(type, user, level);
     }
 
