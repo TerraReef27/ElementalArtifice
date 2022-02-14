@@ -9,6 +9,7 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.reefside.elementalartifice.client.ClientSetup;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,6 +39,8 @@ public class ElementalArtifice {
         BLOCKS.register(modbus);
         ITEMS.register(modbus);
         ENTITIES.register(modbus);
+
+        //DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> modbus.addListener(ClientSetup::init));
     }
 
     private void setup(FMLCommonSetupEvent event)
