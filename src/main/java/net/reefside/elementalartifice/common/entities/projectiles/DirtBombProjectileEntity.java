@@ -11,8 +11,11 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.reefside.elementalartifice.common.blocks.ArtBlocks;
 import net.reefside.elementalartifice.common.items.ArtItems;
 
 public class DirtBombProjectileEntity extends ThrowableItemProjectile {
@@ -44,7 +47,7 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
                 this.level.addParticle(particleOptions, this.getX(), this.getY(), this.getZ(), 10.0D,  10.0D, 10.0D);
             }
 
-            
+
         }
     }
 
@@ -59,6 +62,9 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
         super.onHit(hitResult);
         if(!this.level.isClientSide) {
             this.level.broadcastEntityEvent(this, (byte)3);
+            System.out.println("Hit Position: " + this.blockPosition());
+            //this.level.gameEvent(this.getOwner(), GameEvent.BLOCK_PLACE, this.blockPosition());
+            level.setBlockAndUpdate(this.blockPosition(), ArtBlocks.TEST_BLOCK.get().defaultBlockState());
             this.discard();
         }
     }
