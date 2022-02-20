@@ -52,12 +52,14 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
         }
     }
 
+    /*
     protected void onHitEntity(EntityHitResult entityHitResult) {
         System.out.println("Hit entity");
         super.onHitEntity(entityHitResult);
         Entity entity = entityHitResult.getEntity();
         entity.hurt(DamageSource.thrown(this, this.getOwner()), 100F);
     }
+    */
 
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
@@ -72,7 +74,7 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
 
     private ParticleOptions getParticle() {
         ItemStack itemstack = this.getItemRaw();
-        return (ParticleOptions)(itemstack.isEmpty() ? ParticleTypes.ASH : new ItemParticleOption(ParticleTypes.ITEM, itemstack));
+        return (ParticleOptions)(itemstack.isEmpty() ? ParticleTypes.CLOUD : new ItemParticleOption(ParticleTypes.ITEM, itemstack));
     }
 
     private void createCluster(BlockPos blockPos, BlockState block, int size) {
@@ -82,7 +84,9 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
                     for(int k= -circumference; k<circumference; k++) {
                         int d = i*i + j*j + k*k;
                         if(d < circumference-1) {
-                            level.setBlockAndUpdate(blockPos.offset(i, j, k), block);
+                            if(this.level.getBlockState(blockPos.offset(i, j, k)).isAir()) {
+                                this.level.setBlockAndUpdate(blockPos.offset(i, j, k), block);
+                            }
                         }
                     }
                 }
