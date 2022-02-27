@@ -22,8 +22,9 @@ public class ArtDataGen {
         }
 
         if(event.includeClient()) {
-            generator.addProvider(new ArtBlockStatesGen(generator, helper));
+            generator.addProvider(new ArtBlockstatesGen(generator, helper));
             generator.addProvider(new ArtItemModelsGen(generator, helper));
+            generator.addProvider(new ArtLangProvider(generator, "en_us"));
         }
     }
 }

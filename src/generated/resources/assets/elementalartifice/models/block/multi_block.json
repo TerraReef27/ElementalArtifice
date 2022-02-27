@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "elementalartifice:block/multi_block",
+    "end": "elementalartifice:block/multi_block_top"
+  }
+}

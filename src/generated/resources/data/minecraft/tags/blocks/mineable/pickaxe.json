@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "elementalartifice:test_block",
     "elementalartifice:test_block"
   ]
 }

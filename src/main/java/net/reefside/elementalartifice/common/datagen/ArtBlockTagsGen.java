@@ -18,6 +18,7 @@ public class ArtBlockTagsGen extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ArtBlocks.TEST_BLOCK.get())
                 .add(ArtBlocks.TEST_BLOCK.get());
     }
 }
