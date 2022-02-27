@@ -25,10 +25,10 @@ public class ArtBlockstatesGen extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(ArtBlocks.TEST_BLOCK.get());
         logBlock((RotatedPillarBlock) ArtBlocks.MULTI_BLOCK.get());
-        simpleBlock(ArtBlocks.RAW_EARTH_CRYSTAL_BLOCK.get(), new ConfiguredModel(models().getExistingFile(new ResourceLocation(MODID, ArtBlocks.RAW_EARTH_CRYSTAL_BLOCK.get().getRegistryName().getPath().toLowerCase(Locale.ROOT)))));
+        simpleBlockModel(ArtBlocks.RAW_EARTH_CRYSTAL_BLOCK.get());
     }
 
-//    private void simpleBlockModel(Block block) {
-//        simpleBlock(block, new ConfiguredModel(models().getExistingFile()));
-//    }
+    private void simpleBlockModel(Block aBlock) {
+        simpleBlock(aBlock, new ConfiguredModel(models().getExistingFile(new ResourceLocation(MODID, aBlock.getRegistryName().getPath()))));
+    }
 }
