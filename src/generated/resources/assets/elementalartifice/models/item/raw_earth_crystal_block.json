@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "elementalartifice:item/dirt_bomb_item"
-  }
+  "parent": "elementalartifice:block/raw_earth_crystal_block"
 }
