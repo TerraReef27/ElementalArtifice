@@ -19,6 +19,7 @@ public class ArtDataGen {
             ArtBlockTagsGen blockTags = new ArtBlockTagsGen(generator, helper);
             generator.addProvider(blockTags);
             generator.addProvider(new ArtItemGen(generator, blockTags, helper));
+            generator.addProvider(new ArtLootTables(generator));
         }
 
         if(event.includeClient()) {
