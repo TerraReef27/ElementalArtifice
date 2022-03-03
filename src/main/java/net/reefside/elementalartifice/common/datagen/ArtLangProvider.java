@@ -18,7 +18,7 @@ public class ArtLangProvider extends LanguageProvider {
 
         add(ArtBlocks.TEST_BLOCK.get(), "Test Block");
         add(ArtBlocks.MULTI_BLOCK.get(), "Multi Block");
-
+        add(ArtBlocks.EARTH_CRYSTAL_BLOCK.get(), "Earth Crystal Chunk");
         add(ArtItems.DIRT_BOMB_ITEM.get(), "Dirt Bomb");
     }
 }

@@ -2,13 +2,13 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "raw_earth_crystal_block",
+      "name": "earth_crystal_block",
       "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "elementalartifice:raw_earth_crystal_block"
+          "name": "elementalartifice:earth_crystal_block"
         }
       ]
     }

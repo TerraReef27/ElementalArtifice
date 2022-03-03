@@ -84,7 +84,7 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
                     for(int k= -circumference; k<circumference; k++) {
                         int d = i*i + j*j + k*k;
                         if(d < circumference-1) {
-                            if(this.level.getBlockState(blockPos.offset(i, j, k)).isAir()) {
+                            if(this.level.getBlockState(blockPos.offset(i, j, k)).isAir()) { //TODO: Potentially check if block can be replaced so water and foliage is replaced
                                 this.level.setBlockAndUpdate(blockPos.offset(i, j, k), block);
                             }
                         }

@@ -19,7 +19,7 @@ public class ArtItemGen extends ItemTagsProvider {
     protected void addTags() {
         tag(Tags.Items.COBBLESTONE)
             .add(ArtItems.TEST_BLOCKITEM.get())
-            .add(ArtItems.RAW_EARTH_CRYSTAL_BLOCKITEM.get());
+            .add(ArtItems.EARTH_CRYSTAL_BLOCKITEM.get());
     }
 
     @Override

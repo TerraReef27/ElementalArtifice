@@ -16,7 +16,7 @@ public class ArtItemModelsGen extends ItemModelProvider {
     @Override
     protected void registerModels() {
         withExistingParent(ArtItems.TEST_BLOCKITEM.get().getRegistryName().getPath(), modLoc("block/test_block"));
-        withExistingParent(ArtItems.RAW_EARTH_CRYSTAL_BLOCKITEM.get().getRegistryName().getPath(), modLoc("block/raw_earth_crystal_block"));
+        withExistingParent(ArtItems.EARTH_CRYSTAL_BLOCKITEM.get().getRegistryName().getPath(), modLoc("block/earth_crystal_block"));
 
         singleTexture(ArtItems.DIRT_BOMB_ITEM.get().getRegistryName().getPath(),
                 mcLoc("item/generated"),

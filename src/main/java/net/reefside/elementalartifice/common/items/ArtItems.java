@@ -15,6 +15,6 @@ public class ArtItems {
 
     public static final RegistryObject<Item> TEST_BLOCKITEM = ITEMS.register(ArtBlocks.TEST_BLOCK.getId().getPath(), () -> new BlockItem(ArtBlocks.TEST_BLOCK.get(), new Item.Properties().tab(ITEM_GROUP)));
     public static final RegistryObject<Item> MULTI_BLOCK = ITEMS.register(ArtBlocks.MULTI_BLOCK.getId().getPath(), () -> new BlockItem(ArtBlocks.MULTI_BLOCK.get(), new Item.Properties().tab(ITEM_GROUP)));
-    public static final RegistryObject<Item> RAW_EARTH_CRYSTAL_BLOCKITEM = ITEMS.register(ArtBlocks.RAW_EARTH_CRYSTAL_BLOCK.getId().getPath(), () -> new BlockItem(ArtBlocks.RAW_EARTH_CRYSTAL_BLOCK.get(), new Item.Properties().tab((ITEM_GROUP))));
+    public static final RegistryObject<Item> EARTH_CRYSTAL_BLOCKITEM = ITEMS.register(ArtBlocks.EARTH_CRYSTAL_BLOCK.getId().getPath(), () -> new BlockItem(ArtBlocks.EARTH_CRYSTAL_BLOCK.get(), new Item.Properties().tab((ITEM_GROUP))));
     public static final RegistryObject<Item> DIRT_BOMB_ITEM = ITEMS.register("dirt_bomb", () -> new DirtBombItem(new Item.Properties().tab(ITEM_GROUP)));
 }
