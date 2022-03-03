@@ -1,3 +1,3 @@
 # Elemental Artifice
 
-A Minecraft mod about using elemental crystals to fuel technological innovation.
+A Minecraft mod about using the power of the elements to create contraptions.
