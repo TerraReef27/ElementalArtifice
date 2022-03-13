@@ -43,11 +43,10 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
     public void handleEntityEvent(byte pId) {
         System.out.println("Handling entity");
         if(pId == 3) {
-            System.out.println("Adding particles");
             ParticleOptions particleOptions = this.getParticle();
 
-            for(int i=0; i<100; i++) {
-                this.level.addParticle(particleOptions, this.getX(), this.getY(), this.getZ(), 10.0D,  10.0D, 10.0D);
+            for(int i=0; i<10; i++) {
+                this.level.addParticle(particleOptions, this.getX(), this.getY(), this.getZ(), 1.0D,  1.0D, 1.0D);
             }
         }
     }
@@ -65,7 +64,6 @@ public class DirtBombProjectileEntity extends ThrowableItemProjectile {
         super.onHit(hitResult);
         if(!this.level.isClientSide) {
             this.level.broadcastEntityEvent(this, (byte)3);
-            System.out.println("Hit Position: " + this.blockPosition());
             BlockState block = Blocks.DIRT.defaultBlockState();
             createCluster(this.blockPosition(), block, 3);
             this.discard();

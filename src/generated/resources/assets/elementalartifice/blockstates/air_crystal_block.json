@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "elementalartifice:block/air_crystal_block",
+      "uvlock": true
+    }
+  }
+}

@@ -21,4 +21,8 @@ public class ArtBlocks {
 
     public static final RegistryObject<Block> EARTH_CRYSTAL_BLOCK = BLOCKS.register("earth_crystal_block",
             () -> new EarthCrystalBlock(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<Block> WATER_CRYSTAL_BLOCK = BLOCKS.register("water_crystal_block",
+            () -> new EarthCrystalBlock(BlockBehaviour.Properties.of(Material.STONE)));
+    public static final RegistryObject<Block> AIR_CRYSTAL_BLOCK = BLOCKS.register("air_crystal_block",
+            () -> new EarthCrystalBlock(BlockBehaviour.Properties.of(Material.STONE)));
 }

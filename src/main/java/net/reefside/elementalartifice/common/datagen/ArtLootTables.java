@@ -14,5 +14,7 @@ public class ArtLootTables extends BaseLootTableProvider {
         lootTables.put(ArtBlocks.TEST_BLOCK.get(), createSimpleTable("test_block", ArtBlocks.TEST_BLOCK.get()));
         lootTables.put(ArtBlocks.MULTI_BLOCK.get(), createSimpleTable("multi_block", ArtBlocks.MULTI_BLOCK.get()));
         lootTables.put(ArtBlocks.EARTH_CRYSTAL_BLOCK.get(), createSimpleTable("earth_crystal_block", ArtBlocks.EARTH_CRYSTAL_BLOCK.get()));
+        lootTables.put(ArtBlocks.WATER_CRYSTAL_BLOCK.get(), createSimpleTable("water_crystal_block", ArtBlocks.WATER_CRYSTAL_BLOCK.get()));
+        //lootTables.put(ArtBlocks.AIR_CRYSTAL_BLOCK.get(), createSimpleTable("air_crystal_block", ArtBlocks.WATER_CRYSTAL_BLOCK.get()));
     }
 }

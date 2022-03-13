@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "elementalartifice:test_block",
-    "elementalartifice:earth_crystal_block"
+    "elementalartifice:earth_crystal_block",
+    "elementalartifice:water_crystal_block",
+    "elementalartifice:air_crystal_block"
   ]
 }

@@ -1,7 +1,9 @@
 {
+  "block.elementalartifice.air_crystal_block": "Air Crystal Chunk",
   "block.elementalartifice.earth_crystal_block": "Earth Crystal Chunk",
   "block.elementalartifice.multi_block": "Multi Block",
   "block.elementalartifice.test_block": "Test Block",
+  "block.elementalartifice.water_crystal_block": "Water Crystal Chunk",
   "item.elementalartifice.dirt_bomb": "Dirt Bomb",
   "itemGroup.Elemental Artifice": "Elemental Artifice"
 }
